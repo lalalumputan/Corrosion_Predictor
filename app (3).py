@@ -9,7 +9,7 @@ label_encoder = joblib.load("label_encoder.pkl")
 from PIL import Image
 
 # Load gambar header
-image = Image.open("header")
+image = Image.open("header.png")
 st.image(image, width=100)  # atur ukuran sesuai kebutuhan
 
 st.markdown("<h1 style='text-align: center;'>Prediksi Korosi Stainless Steel</h1>", unsafe_allow_html=True)
