@@ -6,8 +6,15 @@ import numpy as np
 model = joblib.load("bagging_model.pkl")
 label_encoder = joblib.load("label_encoder.pkl")
 
-st.title("🔎 Prediksi Korosi Stainless Steel")
+from PIL import Image
+
+# Load gambar header
+image = Image.open("header")
+st.image(image, width=100)  # atur ukuran sesuai kebutuhan
+
+st.markdown("<h1 style='text-align: center;'>Prediksi Korosi Stainless Steel</h1>", unsafe_allow_html=True)
 st.write("Masukkan parameter stainless steel dan kondisi lingkungan untuk memprediksi tingkat korosi.")
+
 
 # --- Input Komposisi Kimia ---
 st.header("⚙️ Komposisi Kimia (%)")
